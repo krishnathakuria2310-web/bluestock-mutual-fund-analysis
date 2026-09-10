@@ -5,7 +5,7 @@ csv_files = list(RAW_DATA_PATH.glob("*.csv"))
 print(f"Found {len(csv_files)} CSV files.")
 for file_path in csv_files:
     df = pd.read_csv(file_path)
-    print("=" * 60)
+    print("=" *60)
     print(f"FILE: {file_path.name}")
     print(f"Shape: {df.shape}")
     print("\nData Types:")
@@ -19,4 +19,4 @@ for file_path in csv_files:
     if df.isnull().sum().sum() > 0:
         print("\nRows with missing values:")
         print(df[df.isnull().any(axis=1)])
-    print("=" * 60)
+    print("=" *60)
